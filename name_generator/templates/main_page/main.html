@@ -1,0 +1,13 @@
+{% load static %}
+
+<link
+rel="stylesheet"
+type="text/css"
+href="{% static 'name_generator/css/bootstrap.css' %}"
+/>
+
+<div class="container text-center">
+    <h1>This is my first Django app!</h1>
+    <h3>This webpage was made with Django framework. There is a couple of generators that gives you an opportunity to create some random names, nicknames and etc.</h3>
+    <a href="{% url 'home_name_page' %}" class="btn btn-outline-primary">Generate common name</a>
+</div>

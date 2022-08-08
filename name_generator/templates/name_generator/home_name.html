@@ -1,0 +1,24 @@
+{% load static %}
+
+<link
+rel="stylesheet"
+type="text/css"
+href="{% static 'name_generator/css/bootstrap.css' %}"
+/>
+
+<div class="container text-center">
+<h1>Common name generator</h1>
+    <form action="{% url 'name_page' %}">
+        <select name="parameters">
+            <option value="full" selected="selected">Full name</option>
+            <option value="first">First name</option>
+            <option value="last">Last name</option>
+        </select> Parameters
+    <br>
+        <input type="radio" value="male" name="gender"> Male
+        <input type="radio" value="female" name="gender"> Female
+    <br>
+        <a href="{% url 'main_page' %}" class="btn btn-warning">Return</a>    
+        <input type="submit" value="Generate" class="btn btn-primary">
+    </form>
+</div>
